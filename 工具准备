@@ -1,4 +1,24 @@
 1. coding：python，anaconda
-2. data store：myql；
+2. data store：
+  myql；
   安装：https://www.jianshu.com/p/fd3aae701db9
+  python pandas的dataframe保存到mysql有很多坑；df.to_sql, pd.io.sql.to_sql都有坑；
+  关于坑的文档：http://blog.csdn.net/qq_34685317/article/details/72896306；截至2018.1.5，该文档中的函数也被弃用了；有新的方法把dataframe导入到 mysql，欢迎交流；
+  楼主尝试了很多方案，无果，选择使用mongodb；
+  
+  mongodb:
+  安装：http://www.runoob.com/mongodb/mongodb-osx-install.html
+  添加到环境变量PATH中
+    1）~/.bash_profile （任意一个文件中添加用户级环境变量）
+  （注：Linux 里面是 .bashrc 而 Mac 是 .bash_profile）
+  若bash shell是以login方式执行时，才会读取此文件。该文件仅仅执行一次!默认情况下,他设置一些环境变量
+  设置命令别名alias ll=’ls -la’
+  设置环境变量：
+
+  export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+  2）~/.bashrc 同上
+
+  如果想立刻生效，则可执行下面的语句：
+  $ source 相应的文件
+  一般环境变量更改后，重启后生效。
   
